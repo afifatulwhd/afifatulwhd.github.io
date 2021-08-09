@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head> 
+    <meta charset="utf-8"> 
+    <title>Prototype SIAKAD</title> 
+    
+    <meta name="description" content=""> 
+    <meta name="author" content=""> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/font-awesome.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/smartadmin-production-plugins.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/smartadmin-production.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/smartadmin-skins.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/smartadmin-rtl.min.css"> 
+
+    <style type="text/css">#pnlShortcut{text-align:center;vertical-align:middle;}#pnlShortcut div.icon{margin:3px;}#pnlShortcut div.icon a{display:block;float:left;height:137px!important;height:140px;width:137px!important;width:140px;vertical-align:middle;text-decoration:none;border:1px solid#DDD;padding:2px 5px 1px 5px;}#pnlShortcut div.icon a:link{color:#808080;}#pnlShortcut div.icon a:hover{color:#333;background-color:#f1e8e6;border:1px solid#c24733;padding:3px 4px 0px 6px;background-color:#D8E9EC;}#pnlShortcut div.icon a:active{color:#808080;}#pnlShortcut div.icon a:visited{color:#808080;}#pnlShortcut div.icon img{margin-top:10px;border:0px;}#pnlShortcut div.icon span{display:block;padding-top:12px;padding-bottom:10px;}</style> 
+    
+    <link rel="shortcut icon" href="https://ibi-k57.ac.id/simpt/img/favicon/favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="https://ibi-k57.ac.id/simpt/img/favicon/favicon.ico" type="image/x-icon"> 
+    
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">--> 
+    <link rel="stylesheet" type="text/css" media="screen" href="https://ibi-k57.ac.id/simpt/css/GoogleFonts.css"> 
+    
+
+    <style>
+        df-messenger {
+        
+         --df-messenger-bot-message: #df9b56;
+         --df-messenger-chat-background-color: #fafafa;
+         --df-messenger-font-color: white;
+         --df-messenger-send-icon: #878fac;
+         --df-messenger-user-message: #479b3d;
+        }
+      </style>
+
+    <df-messenger
+    chat-icon="https:&#x2F;&#x2F;i.postimg.cc&#x2F;7hPbjb3Z&#x2F;Avatar-Maker-1.png"
+    intent="WELCOME"
+    chat-title="i-Bot"
+    agent-id="3b39640d-00cd-4a40-aabd-8433ca55b31a"
+    language-code="id">
+    </df-messenger>
+
+</head> 
+
+<body class="fixed-navigation smart-style-0  desktop-detected pace-done" style="">
+    
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(0%, 0px, 0px);">
+            <div class="pace-progress-inner">
+            </div>
+        </div>
+        <div class="pace-activity">
+        </div>
+    </div> 
+    
+
+<header id="header"> 
+    <div id="logo-group"> 
+        <span id="logo" onclick="about();"> <img src="https://ibi-k57.ac.id/simpt/img/logo.png" alt="SIMPTv3"> </span> 
+            <span id="activity" class="activity-dropdown" onclick="showInfo();" title="Profil Pengguna"> <i class="fa fa-user"></i> </span> 
+    </div> 
+    <div class="project-context hidden-xs"> 
+        <span class="text-align-left">Modul: MAHASISWA</span> 
+        <span class="text-align-left">MAHASISWA</span> 
+    </div> 
+    <div class="pull-right"> 
+        <div id="hide-menu" class="btn-header pull-right"> 
+            <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span> 
+        </div> 
+        <div id="logout" class="btn-header transparent pull-right"> 
+            <span><a href="javascript:logout();" title="Sign Out" data-action="userLogout" data-logout-msg="Apakah Anda akan keluar dari aplikasi ini?"><i class="fa fa-sign-out"></i></a> </span> 
+        </div> 
+        <div id="fullscreen" class="btn-header transparent pull-right"> 
+            <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="Full Screen"><i class="fa fa-arrows-alt"></i></a></span> 
+        </div> 
+        <div id="help" class="btn-header transparent pull-right"> 
+            <span> <a href="javascript:help();" title="Help"><i class="fa fa-question-circle"></i></a></span> 
+        </div> 
+    </div> 
+</header> 
+
+<aside id="left-panel">
+    <div class="login-info">
+        <span><a href="javascript:void(0);" id="show-shortcut"><i class="\&quot;fa" fa-lg="" fa-fw="" fa-th-large="" \"=""></i>
+            <span>05201740077</span></a>
+        </span>
+    </div>
+    
+    <nav>
+        <ul style="">
+            <li id="mnu6001" class="active">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/">
+                <i class="fa fa-lg fa-fw "></i> 
+                <span class="menu-item-parent">Home</span></a>
+            </li>
+            <li id="mnu6002">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/kalendar">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">Kalendar</span>
+                </a>
+            </li>
+            <li id="mnu6003">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/data">
+                    <i class="fa fa-lg fa-fw "></i>
+                    <span class="menu-item-parent">Data Pribadi</span>
+                </a>
+            </li>
+            <li id="mnu6004">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/akademik">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">Data Akademik</span>
+                </a>
+            </li>
+            <li id="mnu6005">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/keu">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">Data Keuangan</span>
+                </a>
+            </li>
+            <li id="mnu6006">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/krs/isikrs">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">KRS</span>
+                </a>
+            </li>
+            <li id="mnu6007">
+                <a href="#">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">Jadwal</span>
+                    <b class="collapse-sign">
+                        <em class="fa fa-plus-square-o"></em>
+                    </b>
+                </a>
+                <ul>
+                    <li id="mnu6008">
+                        <a href="https://ibi-k57.ac.id/simpt/mhs/jadwal/kuliah">
+                            <i class="fa fa-lg fa-fw "></i> 
+                            <span class="menu-item-parent">Kuliah</span>
+                        </a>
+                    </li>
+                    <li id="mnu6009">
+                        <a href="https://ibi-k57.ac.id/simpt/mhs/jadwal/uts">
+                            <i class="fa fa-lg fa-fw "></i> 
+                            <span class="menu-item-parent">UTS</span>
+                        </a>
+                    </li>
+                    <li id="mnu6010">
+                        <a href="https://ibi-k57.ac.id/simpt/mhs/jadwal/uas">
+                            <i class="fa fa-lg fa-fw "></i> 
+                            <span class="menu-item-parent">UAS</span>
+                        </a>
+                    </li>
+                    <li id="mnu6011">
+                        <a href="https://ibi-k57.ac.id/simpt/mhs/jadwal/mksp">
+                            <i class="fa fa-lg fa-fw "></i> 
+                            <span class="menu-item-parent">MK Spesial</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li id="mnu6012">
+                <a href="https://ibi-k57.ac.id/simpt/mhs/elearning">
+                    <i class="fa fa-lg fa-fw "></i> 
+                    <span class="menu-item-parent">Virtual Class</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside> 
+
+<div id="main" role="main"> 
+    <div id="ribbon"> 
+        <span class="ribbon-button-alignment"> 
+            <span id="refresh" class="btn btn-ribbon"> 
+                <i class="fa fa-th"></i> 
+            </span> 
+        </span> 
+        <ol class="breadcrumb"> 
+            <li>Beranda</li> 
+        </ol> 
+    </div> 
+    <div id="content"> 
+        <div class="row"> 
+            <div class="col-sm-12"> 
+                <!-- new widget --> 
+                <div class="jarviswidget jarviswidget-color-blueDark"> 
+                    <header> 
+                        <span class="widget-icon"> <i class="fa fa-calendar"></i> 
+                        </span> 
+                        <h2> Shortcut </h2> 
+                    </header> 
+                    <div> <div class="jarviswidget-editbox"> </div> 
+                    <div class="widget-body"> <p> </p> 
+                        <div class="row"> <div class="col-sm-12"> <p>&nbsp;</p> </div> </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="row"> 
+        <div class="col-sm-12"> 
+            <div class="jarviswidget jarviswidget-color-blueDark"> 
+                <header> 
+                    <span class="widget-icon"> <i class="fa fa-bullhorn"></i> </span> 
+                    <h2> Pengumuman </h2> 
+                </header> 
+                <div> 
+                    <div class="jarviswidget-editbox"> </div> 
+                    <div class="widget-body"> 
+                        <div class="well well-sm"> 
+                            <div id="contentBerita">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <center><img src="https://ibi-k57.ac.id/simpt/mhs/home/avatar/e5fe29d89baa11e982aa782bcb5d1f9b" class="img-responsive" width="32" height="32" alt="user">
+                                            <ul class="list-inline padding-10">
+                                                <li><i class="fa fa-calendar"></i>28/07/2021
+                                                </li>
+                                            </ul>
+                                         </center>
+                                    </div>
+    <div class="col-md-10 padding-left-0">
+        <h4 class="margin-top-0">
+            <b>PENGUMUMAN PERKULIAHAN SEMESTER PENDEK TAHUN AKADEMIK 2020/2021 GENAP</b><br>
+            <small class="font-xs"><i>Dibuat oleh: ADMIN-PT</i></small>
+        </h4>
+        <br><p>Assalamualaikum. Yth Mahasiswa/i IBI Kosgoro 1957.</p>
+
+            <p>semoga dalam keadaan sehat selalu.&nbsp;</p>
+
+            <p>Dengan ini kami menyampaikan pengumuman mengenai Pelaksanaan Perkuliahan Semester Pendek Tahun Akademik 2020/2021 Genap.</p>
+
+            <p>Silahkan unduh file dibawah ini :</p>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;">
+    <u>
+        <a href="https://drive.google.com/file/d/1wrw3X_HgfJCPvSc2h3Qf3ZlF4vA9HzoP/view?usp=sharing">
+        <span style="font-size:20px"><strong>PENGUMUMAN SEMESTER PENDEK</strong></span></a>
+    </u>
+</div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;">
+    <a href="https://drive.google.com/file/d/1MbGmucURej_s_5WRMbXg3cJg9TCPCcIr/view?usp=sharinghttps://drive.google.com/file/d/1MbGmucURej_s_5WRMbXg3cJg9TCPCcIr/view?usp=sharing">
+        <span style="font-size:20px"><strong><u>KRS SEMESTER PENDEK</u></strong></span>
+    </a>
+</div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;">
+    <a href="https://drive.google.com/file/d/1GzSk_68IJYiu8J0lo-kks3kZgg2skA6u/view?usp=sharing">
+        <span style="font-size:20px"><u><strong>SOP SEMESTER PENDEK</strong></u></span>
+    </a>
+</div>
+</div>
+</div>
+<hr>
+<div class="row"><div class="col-md-2"><center><img src="https://ibi-k57.ac.id/simpt/mhs/home/avatar/e5fe29d89baa11e982aa782bcb5d1f9b" class="img-responsive" width="32" height="32" alt="user">
+    <ul class="list-inline padding-10">
+        <li><i class="fa fa-calendar"></i>31/07/2020</li>
+    </ul></center>
+</div>
+<div class="col-md-10 padding-left-0">
+    <h4 class="margin-top-0"><b>PENGUMUMAN UAS SUSULAN 2020/2021 GENAP</b><br>
+        <small class="font-xs"><i>Dibuat oleh: ADMIN-PT</i></small>
+    </h4><br><p>Assalammualaikum, Berikut Pengumuman Susulan UAS GENAP 2020/2021</p>
+
+<p>Untuk Informasi Selengkapnya bisa mengunduh dokumen melalui tautan dibawah ini :</p>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://drive.google.com/file/d/1T4a6egV19jlvp9Qm2z5agh7Plr1zMA7p/view?usp=sharing"><span style="font-size:18px"><strong>DOWNLOAD PENGUMUMAN</strong></span></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://drive.google.com/file/d/1BwVrK3u-8n87N1elk9C4rM48rnJuAcfC/view?usp=sharing"><span style="font-size:18px"><strong>DOWNLOAD FORMULIR PENDAFTARAN UAS SUSULAN&nbsp;</strong></span></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://drive.google.com/file/d/1Q4Gi90m1dqNtDbATXuVYiYi-3Ywe_gd6/view?usp=sharing"><span style="font-size:18px"><strong>DOWNLOAD SOP UAS SUSULAN ONLINE</strong></span>&nbsp;</a></div>
+</div></div><hr><div class="row"><div class="col-md-2"><center><img src="https://ibi-k57.ac.id/simpt/mhs/home/avatar/null" class="img-responsive" width="32" height="32" alt="user"><ul class="list-inline padding-10"><li><i class="fa fa-calendar"></i>14/06/2021</li></ul></center></div><div class="col-md-10 padding-left-0"><h4 class="margin-top-0"><b>Kuisioner Evaluasi Dosen Semester Genap 2020/2021</b><br><small class="font-xs"><i>Dibuat oleh: ADMIN</i></small></h4><br><p>Diberitahukan kepada seluruh mahasiswa/i untuk mengisi kuisioner evaluasi untuk setiap dosen pengampu mata kuliah yang di ikutinya pada semester ini sesuai link masing-masing prodi :</p>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3ziVSko"><strong>Prodi Manajemen</strong></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3ghANhK"><strong>Prodi Akuntansi</strong></a>&nbsp;</div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3x4NIu6"><strong>Prodi Komunikasi&nbsp;</strong></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3iAlDH5"><strong>Prodi Adm.Bisnis&nbsp;</strong></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3x8SoPI"><strong>Prodi Informatika</strong></a>&nbsp;</div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://bit.ly/3pQ7cAx"><strong>Prodi Sistem Informasi</strong></a>&nbsp;</div>
+</div></div><hr><div class="row"><div class="col-md-2"><center><img src="https://ibi-k57.ac.id/simpt/mhs/home/avatar/null" class="img-responsive" width="32" height="32" alt="user"><ul class="list-inline padding-10"><li><i class="fa fa-calendar"></i>12/07/2021</li></ul></center></div><div class="col-md-10 padding-left-0"><h4 class="margin-top-0"><b>Kuisioner Sistem Pembelajaran Daring (SPADA) DIkti</b><br><small class="font-xs"><i>Dibuat oleh: AHMAD NURDIN</i></small></h4><br><p>Kepada seluruh mahasiswa untuk berpartisipasi untuk mengisi kuisioner SPADA DIKTI, dalam upaya meningkatkan Klasterisasi&nbsp;IBI Kosgoro 57 semakin Kompetitif</p>
+
+<p>Caranya&nbsp;klik : <a href="https://spada.ibi-k57.ac.id">https://spada.ibi-k57.ac.id</a></p>
+
+<p>1.&nbsp;klik create new account</p>
+
+<p>2. lengkapi form</p>
+
+<p>3. klik&nbsp;•create new my acc</p>
+
+<p>4. cek email aktivasi / confirmasi</p>
+
+<p>5. silahkan login</p>
+
+<p>6. lengkapi data sesuai role Dosen / Mahasiswa</p>
+
+<p>7. Masukkan NPM mahasiswa atau NIDN bagi dosen</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div></div><hr><div class="row"><div class="col-md-2"><center><img src="https://ibi-k57.ac.id/simpt/mhs/home/avatar/e5fe29d89baa11e982aa782bcb5d1f9b" class="img-responsive" width="32" height="32" alt="user"><ul class="list-inline padding-10"><li><i class="fa fa-calendar"></i>14/07/2021</li></ul></center></div><div class="col-md-10 padding-left-0"><h4 class="margin-top-0"><b>Jadwal dan SOP UAS Online 2020/2021 Genap</b><br><small class="font-xs"><i>Dibuat oleh: ADMIN-PT</i></small></h4><br><p>Assalamualaikum. Bapak/Ibu Dosen, Mahasiswa/i dan Staff IBI-K57, semoga dalam keadaan sehat selalu.&nbsp;</p>
+
+<p>Izin menyampaikan mengenai&nbsp;Jadwal dan SOP UAS Semester 2020/2021&nbsp;Genap.</p>
+
+<p>Silahkan unduh Jadwal melalui link dibawah ini :</p>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://drive.google.com/file/d/1Z9NuiW_lHXl7xBfr0Bdo9Z4PjtpwG4PK/view?usp=sharing"><strong>Download Jadwal UAS</strong></a></div>
+
+<div style="background: rgb(238, 238, 238); border: 1px solid rgb(204, 204, 204); padding: 5px 10px; text-align: center;"><a href="https://drive.google.com/file/d/1GQJUnkz2sgiME8Twd2E4SBSa4rQfYTuS/view?usp=sharing"><strong>Download SOP UAS</strong></a></div>
+</div></div><hr></div> </div> <div class="text-center"> <ul id="pageBerita" class="pagination pagination-sm"><li class="page-item first disabled"><a href="#" class="page-link">First</a></li><li class="page-item prev disabled"><a href="#" class="page-link">Previous</a></li><li class="page-item active"><a href="#" class="page-link">1</a></li><li class="page-item"><a href="#" class="page-link">2</a></li><li class="page-item next"><a href="#" class="page-link">Next</a></li><li class="page-item last"><a href="#" class="page-link">Last</a></li></ul> </div> </div> </div> </div> </div> </div> </div> </div> <div class="page-footer"> <div class="row"> <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">Tahun Akademik <b>2020/2021</b> Semester <b>GENAP</b></span> </div> <div class="col-xs-6 col-sm-6 text-right hidden-xs"> <div class="txt-color-white inline-block"> <i class="txt-color-blueLight hidden-mobile">SIMPTv3 - © EAM 2017</i> </div> </div> </div> </div> <!-- Modal --> <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button> <h4 class="modal-title" id="myModalLabel">Informasi Aplikasi</h4> </div> <div class="modal-body"> <div class="row"> <div class="col-md-12"> <div class="well well-primary"> <center> SISTEM INFORMASI MANAJEMEN PERGURUAN TINGGI <br> Versi 3.0 </center> </div> </div> </div> <div class="row"> <div class="col-md-12"> <div class="well well-primary bg-color-lighten"> <center> <span class="text-info">Lisensi program ini berikan kepada:</span><br> <strong>INSTITUT BISNIS &amp; INFORMATIKA KOSGORO 1957</strong> <br> Versi 3.0 </center> </div> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-primary fa fa-check-circle" data-dismiss="modal"> Tutup </button> </div> </div><!-- /.modal-content --> </div><!-- /.modal-dialog --> </div><!-- /.modal --> <script data-pace-options="{ &quot;restartOnRequestAfter&quot;: true }" src="https://ibi-k57.ac.id/simpt/js/plugin/pace/pace.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/libs/jquery-2.1.1.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/libs/jquery-ui.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/bootstrap/bootstrap.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/app.config.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/notification/SmartNotification.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/msie-fix/jquery.mb.browser.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/fastclick/fastclick.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/libs/amplify.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/blockUI/jquery.blockUI.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/plugin/select2/select2.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/knockout/knockout-3.4.1.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/knockout/knockout-binding.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/knockout/knockout-select2.min.js"></script> <script src="https://ibi-k57.ac.id/simpt/js/dialog.js"></script> <!--[if IE 8]> <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1> <![endif]-->         <script>$(function(){$(document).bind("ajaxSend",function(){$.blockUI({message:'<i class="fa fa-refresh fa-spin"></i><h3>Harap tunggu...</h3>',css:{border:'none',padding:'15px',backgroundColor:'#000','-webkit-border-radius':'10px','-moz-border-radius':'10px',opacity:.5,color:'#fff'}});}).bind("ajaxStop",function(){$.unblockUI();}).bind("ajaxError",function(){$.unblockUI();});$(document).ajaxComplete(function(event,request,settings){});if(amplify.store.sessionStorage("menumhs0q1ubp5814bu5j8b0hhkleots1")!=null)
+{var menu=amplify.store.sessionStorage("menumhs0q1ubp5814bu5j8b0hhkleots1");$("#left-panel").html(menu);$('#mnu6001').addClass('active');}else
+{$.get("https://ibi-k57.ac.id/simpt/mhs/home/getmenu","",function(data)
+{amplify.store.sessionStorage("menumhs0q1ubp5814bu5j8b0hhkleots1",data);$("#left-panel").html(data);$('#mnu6001').addClass('active');$("nav ul").jarvismenu({"accordion":menu_accordion||!0,"speed":menu_speed||!0,"closedSign":'<em class="fa fa-plus-square-o"></em>',"openedSign":'<em class="fa fa-minus-square-o"></em>'});});}
+$.widget("ui.dialog",$.extend({},$.ui.dialog.prototype,{_title:function(title){if(!this.options.title){title.html("&#160;");}else{title.html(this.options.title);}}}));});function logout(){clearAllSessionStorage();document.location.href="https://ibi-k57.ac.id/simpt/auth/logout";}
+function chrgrole()
+{$.get("https://ibi-k57.ac.id/simpt/auth/clearrole","app_id=mhs",function(data)
+{if(amplify.store.sessionStorage("menumhs0q1ubp5814bu5j8b0hhkleots1")!=null)
+{amplify.store.sessionStorage("menumhs0q1ubp5814bu5j8b0hhkleots1",null);}
+location.reload();});}
+function clearAllSessionStorage(){var v=amplify.store.sessionStorage();for(i=0;i<Object.keys(v).length;i++)
+{key=Object.keys(v)[i];if(key.substring(0,4)=='menu')
+{amplify.store.sessionStorage(key,null);}}}</script>        <script src="https://ibi-k57.ac.id/simpt/js/app.min.js"></script>        
+        <script src="https://ibi-k57.ac.id/simpt/js/smartwidgets/jarvis.widget.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/jquery.twbsPagination.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/flot/jquery.flot.cust.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/flot/jquery.flot.resize.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/flot/jquery.flot.pie.min.js"></script><script src="https://ibi-k57.ac.id/simpt/js/plugin/flot/jquery.flot.tooltip.min.js"></script>        <script type="text/javascript">
+                    $(document).ready(function () {
+                        $.sound_path = "https://ibi-k57.ac.id/simpt/sound/";
+                        pageSetUp();
+                    });
+
+                    function showInfo()
+                    {
+                        document.location = "https://ibi-k57.ac.id/simpt/home/profile/mhs";
+                    }
+
+                    function help()
+                    {
+                        window.open("https://ibi-k57.ac.id/simpt/help/mhs/index.html");
+                    }
+
+                    function about()
+                    {
+                        $('#myModal').modal('show');
+                    }
+
+                    function prnWindow(loc)
+                    {
+                        window.open("https://ibi-k57.ac.id/simpt/mhs"+loc);
+                    }
+
+        </script>
+        <script>jQuery(function($){showBerita(0);});function showBerita(sLimit)
+{$.get("https://ibi-k57.ac.id/simpt/mhs/home/gridnews/"+sLimit,"",function(d){s="";if(d['aaData'].length>0){if(sLimit==0){$('#pageBerita').twbsPagination({totalPages:Math.ceil(d['iTotalRecords']/ 5),visiblePages:5,onPageClick:function(event,page){showBerita((page-1)*5);}});}
+for(i=0;i<d['iTotalDisplayRecords'];i++)
+{s+='<div class="row">';s+='<div class="col-md-2">';s+='<center>';s+='<img src="'+"https://ibi-k57.ac.id/simpt/mhs/home/avatar/"+d['aaData'][i][6]+'" class="img-responsive" width="32" height="32" alt="user">';s+='<ul class="list-inline padding-10">';s+='<li>';s+='<i class="fa fa-calendar"></i>';s+=d['aaData'][i][5];s+='</li>';s+='</ul>';s+='</center>';s+='</div>';s+='<div class="col-md-10 padding-left-0">';s+='<h4 class="margin-top-0"><b>'+d['aaData'][i][2]+'</b><br><small class="font-xs"><i>Dibuat oleh: '+d['aaData'][i][4]+'</i></small></h4><br/>';s+=d['aaData'][i][3];s+='</div></div><hr>';}}
+$("#contentBerita").html(s);},"json");}</script>   
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+
+<div id="divSmallBoxes"></div><div id="divMiniIcons"></div><div id="divbigBoxes"></div></body>
+
+</html>
